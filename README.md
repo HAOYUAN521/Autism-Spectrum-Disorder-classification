@@ -16,7 +16,7 @@ Autism Spectrum Disorder (ASD) is a complex neurodevelopmental disease that main
       -d func_preproc \
       -p dparsf \
       -s filt_global \
-      -o /projects/hw4m/Fmri/fmri_image/Outputs/
+      -o your_output_dir
   ```
 ### Libraries Used
 Libraries used: PyTorch, TorchVision, Lightning, TorchMetrics, NiBabel, Nilearn, SciPy, NumPy, Pandas, and Scikit-learn.
@@ -25,6 +25,17 @@ How to install the libraries used:
 ```bash
 pip install -r requirements.txt
 ```
+
+
+### Environment and Hardware
+
+This project was run on the following GPU hardware:
+
+- **GPU Model**: NVIDIA GeForce RTX 2080 Ti
+- **Driver Version**: 570.124.06
+- **CUDA Version**: 12.8
+- **Total GPU Memory**: 11,264 MiB
+- **Current Memory Usage**: 202 MiB
 
 
 
