@@ -17,7 +17,7 @@ Autism Spectrum Disorder (ASD) is a complex neurodevelopmental disease that main
       -p dparsf \
       -s filt_global \
       -o /projects/hw4m/Fmri/fmri_image/Outputs/
-
+  ```
 
 
 
