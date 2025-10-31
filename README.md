@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ### Environment and Hardware
 
-python version: 3.12.8
+Python version used: 3.12.8
 
 This project was run on the following GPU hardware:
 
