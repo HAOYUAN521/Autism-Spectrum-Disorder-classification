@@ -19,6 +19,12 @@ Autism Spectrum Disorder (ASD) is a complex neurodevelopmental disease that main
       -o /projects/hw4m/Fmri/fmri_image/Outputs/
   ```
 ### Libraries Used
+Libraries used: Numpy, Pandas, mpi4py, sklearn, matplotlib, scipy, statsmodels.
+
+How to install the libraries used:
+```bash
+pip install -r requirements.txt
+```
 
 
 
