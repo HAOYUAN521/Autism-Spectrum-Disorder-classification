@@ -91,9 +91,9 @@ eigenvalues = kpca.eigenvalues_
 # Normalize eigenvalues to get proportion of variance explained by each component
 explained_variance_ratio_kpca = eigenvalues / np.sum(eigenvalues)
 
-# Find number of components needed to explain at least 90% of the variance
+# Find number of components needed to explain at least 99% of the variance
 n_components_kpca = np.argmax(np.cumsum(explained_variance_ratio_kpca) >= 0.99) + 1
-print(f"90% variance contribution: {n_components_kpca}")
+print(f"99% variance contribution: {n_components_kpca}")
 
 # Re-run KPCA with optimal number of components and extract transformed features
 kpca = KernelPCA(n_components=n_components_kpca, kernel='rbf', gamma=15)
