@@ -106,7 +106,7 @@ print(f"99% variance contribution: {n_components_99}")
 # Step 3: Refit PPCA with optimal number of components
 ppca = PPCA(n_components=n_components_99)
 ppca.fit(X)
-pcs_ppca = ppca.transform(X)  # Extract latent feature projections
+ppca_features = ppca.transform(X)  # Extract latent feature projections
 
 
 # ===============================
@@ -117,7 +117,7 @@ fig, axes = plt.subplots(1, 3, figsize=(18, 6), subplot_kw=dict(polar=True), con
 
 # Compute global color scaling (vmin/vmax)
 all_vals = []
-for pc in pcs_ppca.T:
+for pc in ppca_features.T:
     mat = np.outer(pc, pc)
     mat = (mat + mat.T) / 2
     all_vals.extend(mat[np.triu_indices(N, k=1)])
@@ -125,7 +125,7 @@ vmax = np.max(np.abs(all_vals))
 vmin = -vmax
 
 # Plot first three PPCA components as circular brain networks
-for i, (pc, ax) in enumerate(zip(pcs_ppca.T, axes)):
+for i, (pc, ax) in enumerate(zip(ppca_features.T, axes)):
     mat = np.outer(pc, pc)
     mat = (mat + mat.T) / 2
     flat = mat[np.triu_indices(N, k=1)]
