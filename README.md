@@ -7,7 +7,18 @@ Autism Spectrum Disorder (ASD) is a complex neurodevelopmental disease that main
 ## Getting Started
 
 ### Data Load
-The fMRI data for ASD subjects were sourced from the Preprocessed Connectomes Project (PCP)(http://preprocessed-connectomes-project.org/)
+- **Dataset**: ABIDE I (Autism Brain Imaging Data Exchange I)  
+- **Provider**: [Preprocessed Connectomes Project (PCP)](http://preprocessed-connectomes-project.org/abide/)  
+- **Download Method**: Official script `download_abide_preproc.py`  
+- **Command Used**:
+  ```bash
+  python download_abide_preproc.py \
+      -d func_preproc \
+      -p dparsf \
+      -s filt_global \
+      -o /projects/hw4m/Fmri/fmri_image/Outputs/
+
+
 
 
 
