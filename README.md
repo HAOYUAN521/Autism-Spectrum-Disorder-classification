@@ -29,6 +29,8 @@ pip install -r requirements.txt
 
 ### Environment and Hardware
 
+python version: 3.12.8
+
 This project was run on the following GPU hardware:
 
 - **GPU Model**: NVIDIA GeForce RTX 2080 Ti
