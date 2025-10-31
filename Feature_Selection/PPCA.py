@@ -13,9 +13,8 @@ N = 116
 # Number of strongest connections to visualize
 top_k = 50
 
-# ===============================
+
 # Definition of the PPCA class
-# ===============================
 class PPCA:
     def __init__(self, n_components=None):
         # n_components: number of latent dimensions to retain
@@ -91,10 +90,8 @@ class PPCA:
         return np.searchsorted(cumulative_variance_ratio, threshold) + 1
 
 
-# ===============================
-# Apply PPCA to dataset X
-# ===============================
 
+# Apply PPCA to dataset X
 # Step 1: Fit PPCA to estimate variance structure and select components
 ppca = PPCA(n_components=min(X.shape))
 ppca.fit(X)
@@ -109,10 +106,8 @@ ppca.fit(X)
 ppca_features = ppca.transform(X)  # Extract latent feature projections
 
 
-# ===============================
-# Visualization: Connectivity Circles
-# ===============================
 
+# Visualization: Connectivity Circles
 fig, axes = plt.subplots(1, 3, figsize=(18, 6), subplot_kw=dict(polar=True), constrained_layout=True)
 
 # Compute global color scaling (vmin/vmax)
