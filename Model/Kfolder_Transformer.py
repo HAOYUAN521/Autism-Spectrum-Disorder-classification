@@ -127,8 +127,8 @@ class Transformer(pl.LightningModule):
         return loss
 
 
-# 10-Fold Cross-Validation
-kf = KFold(n_splits=10, shuffle=True, random_state=4)
+# 5-Fold Cross-Validation
+kf = KFold(n_splits=5, shuffle=True, random_state=4)
 fold_results = []
 
 for fold, (train_idx, val_idx) in enumerate(kf.split(X)):
@@ -174,7 +174,7 @@ print(f"\nAverage across folds: Val Loss = {avg_loss:.6f}, Val Acc = {avg_acc:.6
 
 # Plot validation accuracy across folds
 plt.figure(figsize=(5,5))
-for fold in range(10):
+for fold in range(5):
     try:
         log_base = f"logs/transformer_fold_{fold}"
         versions = [d for d in os.listdir(log_base) if d.startswith('version_')]
@@ -197,7 +197,7 @@ plt.show()
 
 # Plot validation loss across folds
 plt.figure(figsize=(5,5))
-for fold in range(10):
+for fold in range(5):
     try:
         log_base = f"logs/transformer_fold_{fold}"
         versions = [d for d in os.listdir(log_base) if d.startswith('version_')]
