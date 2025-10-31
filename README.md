@@ -35,7 +35,6 @@ This project was run on the following GPU hardware:
 - **Driver Version**: 570.124.06
 - **CUDA Version**: 12.8
 - **Total GPU Memory**: 11,264 MiB
-- **Current Memory Usage**: 202 MiB
 
 
 
