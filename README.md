@@ -1,4 +1,4 @@
-# Autism Spectrum Disorder classification: A study of using fused features based on deep learning models
+# Autism Spectrum Disorder Classification Using Fused PCA–KPCA–PPCA Features and Transformer-Based Deep Learning
 This study proposes a novel feature fusion method to enhance the ASD classification performance by integrating the principal component features extracted by three dimensionality reduction techniques. The study evaluated the classification effects of three baseline deep learning models. The highest classification accuracy reached 80.2%. This proves that the use of fused features is meaningful.
 
 ## Description
