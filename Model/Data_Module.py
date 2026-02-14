@@ -20,7 +20,7 @@ y = torch.tensor(y, dtype=torch.long)
 
 # Apply SMOTE to balance the dataset
 smote = SMOTE(random_state=4)
-X, y = smote.fit_resample(X, y)
+
 
 
 class FmriDataModule(pl.LightningDataModule):
@@ -52,6 +52,7 @@ class FmriDataModule(pl.LightningDataModule):
         if (stage == 'fit' or stage == 'validate') and not (self.data_train and self.data_val):
             # Use provided indices to split the dataset
             x_train, y_train = X[self.train_indices], y[self.train_indices]
+            x_train, y_train = smote.fit_resample(x_train, y_train)
             x_val, y_val = X[self.val_indices], y[self.val_indices]
             
             # Record data shapes for later reference
