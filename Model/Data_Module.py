@@ -10,13 +10,6 @@ from sklearn.model_selection import train_test_split
 from imblearn.over_sampling import SMOTE
 
 
-# Combine PCA, KPCA, and PPCA features into one feature matrix
-X_combined = np.hstack([pca_features, kpca_features, ppca_features])
-
-# Convert data to PyTorch tensors
-X = np.array(X_combined)
-X = torch.tensor(X, dtype=torch.float32)
-y = torch.tensor(y, dtype=torch.long)
 
 # Apply SMOTE to balance the dataset
 smote = SMOTE(random_state=4)
